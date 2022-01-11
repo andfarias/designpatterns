@@ -4,6 +4,8 @@ import br.com.andersonfariasdev.designpatterns.abstractfactory.aircrafts.Helicop
 import br.com.andersonfariasdev.designpatterns.abstractfactory.aircrafts.IAircraft;
 import br.com.andersonfariasdev.designpatterns.abstractfactory.landvehicles.ILandVehicle;
 import br.com.andersonfariasdev.designpatterns.abstractfactory.landvehicles.Motorcycle;
+import br.com.andersonfariasdev.designpatterns.abstractfactory.seafarer.Boat;
+import br.com.andersonfariasdev.designpatterns.abstractfactory.seafarer.ISeafarer;
 
 public class NineNineTransport implements ITransportFactory {
     @Override
@@ -14,5 +16,10 @@ public class NineNineTransport implements ITransportFactory {
     @Override
     public IAircraft createTransportAircraft() {
         return new Helicopter();
+    }
+
+    @Override
+    public ISeafarer createTransportSeafarer() {
+        return new Boat();
     }
 }
