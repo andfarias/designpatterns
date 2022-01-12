@@ -1,13 +1,12 @@
 package br.com.andersonfariasdev.designpatterns.builder.builders;
 
-import br.com.andersonfariasdev.designpatterns.builder.cars.Car;
-import br.com.andersonfariasdev.designpatterns.builder.cars.Truck;
+import br.com.andersonfariasdev.designpatterns.builder.cars.SportCar;
 import br.com.andersonfariasdev.designpatterns.builder.components.CarType;
 import br.com.andersonfariasdev.designpatterns.builder.components.Color;
 import br.com.andersonfariasdev.designpatterns.builder.components.Engine;
 import br.com.andersonfariasdev.designpatterns.builder.components.Transmission;
 
-public class TruckBuilder implements IBuilder {
+public class SportCarBuilder implements IBuilder {
 
     private CarType carType;
     private int seats;
@@ -40,7 +39,7 @@ public class TruckBuilder implements IBuilder {
         this.color = color;
     }
 
-    public Truck getResult() {
-        return new Truck(carType, seats, engine, transmission);
+    public SportCar getResult() {
+        return new SportCar(carType, seats, engine, transmission, color);
     }
 }

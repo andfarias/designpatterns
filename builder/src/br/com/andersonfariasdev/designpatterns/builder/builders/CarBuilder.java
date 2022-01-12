@@ -2,6 +2,7 @@ package br.com.andersonfariasdev.designpatterns.builder.builders;
 
 import br.com.andersonfariasdev.designpatterns.builder.cars.Car;
 import br.com.andersonfariasdev.designpatterns.builder.components.CarType;
+import br.com.andersonfariasdev.designpatterns.builder.components.Color;
 import br.com.andersonfariasdev.designpatterns.builder.components.Engine;
 import br.com.andersonfariasdev.designpatterns.builder.components.Transmission;
 
@@ -11,6 +12,7 @@ public class CarBuilder implements IBuilder {
     private int seats;
     private Engine engine;
     private Transmission transmission;
+    private Color color;
 
     @Override
     public void setCarType(CarType carType) {
@@ -30,6 +32,11 @@ public class CarBuilder implements IBuilder {
     @Override
     public void setEngine(Engine engine) {
         this.engine = engine;
+    }
+
+    @Override
+    public void setColor(Color color) {
+        this.color = color;
     }
 
     public Car getResult() {
