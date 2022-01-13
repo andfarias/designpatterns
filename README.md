@@ -13,6 +13,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 * Abstract Factory
 * Builder
 * Adapter
+* Bridge
 
 ---
 
